@@ -1,0 +1,181 @@
+body {
+    /* 隱藏滑鼠游標 */
+    cursor: none; 
+    padding: 30px;
+}
+
+.cursor {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.wrap {
+    display: flex; /* 左右排版 */
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+}
+/*------------------------------------------------------------------------*/
+.left {
+    position: fixed;
+    left: 15px;
+    background: pink;
+    width: 320px;
+    height: 90vh;
+    border-radius: 10px;
+    z-index: 1;
+}
+.left div {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+/*------------------------------------------------------------------------*/
+.main {
+    position: relative;
+    right: 15px;
+    width: calc(100% - 365px);
+}
+/* heroimg */
+.heroimg {
+    display: flex; /* 讓 align-items 和 justify-content 被使用 */
+    align-items: center; /* 讓 title 垂直居中 */
+    justify-content: center; /* 讓 title 水平居中 */
+    background: url(Photo/photo.jpg) center/cover;
+    width: 100%;
+    height: 90vh;
+    border-radius: 5px;
+}
+.title {
+    font-size: 6rem;
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px #000;
+    font-weight: bold;
+}
+
+/* snap_list */
+.snap_list_wrap {
+    margin: 50px;
+}
+.snap_list {
+    position: relative;
+    padding: 5px;
+    background: #fff;
+    margin: 15px auto 25px;
+    box-shadow: 0 15px 35px -15px #656565;
+    border-radius: 20px;
+    width: 640px;
+}
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+}
+@supports not (-webkit-touch-callout: none) {
+    .slider {
+        scroll-behavior: smooth;
+    }
+}
+img {
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    scroll-snap-align: start;
+}
+.bullets-container {
+    width: 100%;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+.bullets-container .bullet {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2770ff;
+    border: none;
+    opacity: 0.4;
+    transition: ease 0.3s;
+}
+.bullets-container .bullet.active {
+    transition: ease 0.4s;
+    opacity: 1;
+    transform: scale(1.15);
+}
+#previous, #next {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    background: #2770ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(50% - 25px);
+    left: -20px;
+    box-shadow: 0 12px 25px -9px #0041ac;
+}
+#next {
+    left: unset;
+    right: -20px;
+}
+
+/* snap_card */
+.snap_card {
+    display: flex; /* 讓 align-items 和 justify-content 被使用 */
+    align-items: center; /* 讓 title 垂直居中 */
+    justify-content: center; /* 讓 title 水平居中 */
+    margin-top: 50px;
+    padding: 50px;
+    overflow-x: auto; /* hidden: 跑出畫面則不會出現滾輪 */
+}
+.item {
+    /* flex-grow: 畫面寬度平均分配 */
+    /* flex-grow: 1; */
+    flex-shrink: 0;
+    flex-basis: 200px;
+    /* height: 200px; */
+    background: rgb(181, 228, 86);
+    border: 10px solid #fff;
+    box-shadow: 0 0 10px #000;
+    border-radius: 30px;
+    transition: all .3s;
+}
+.snap_card .item:not(:first-child) {
+    margin-left: -70px;
+}
+.item:hover {
+    transform: translate(15px, -30px) rotate(10deg);
+}
+.item:hover~.item {
+    transform: translateX(120px);
+}
+
+/* footer */
+.footer {
+    background: rgb(80, 80, 80);
+    width: 100%;
+    padding: 60px 0px; 
+    border-radius: 5px;
+}
+.sitemap {
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+}

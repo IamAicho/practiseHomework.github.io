@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末練習</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 導入BS5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <div class="wrap">
+        <!-- 左邊區塊 -->
+        <div class="left">
+            <div class="left_header">Header</div>
+            <div class="calendar">YYYY / MM / DD</div>
+            <div class="category">
+                <a href="#" class="category_box">Box1</a>
+                <a href="#" class="category_box">Box2</a>
+                <a href="#" class="category_box">Box3</a>
+                <a href="#" class="category_box">Box4</a>
+            </div>
+            <div class="sns">
+                <a href="#">Ins</a>
+                <a href="#">FB</a>
+                <a href="#">Line</a>
+            </div>
+        </div>
+
+        <!-- 主要區塊 -->
+        <div class="main">
+            <div class="heroimg">
+                <div class="title">TITLE</div>
+            </div>
+
+            <div class="snap_list_wrap">
+                <div class="snap_list">
+                    <div id="slider" class="slider">
+                        <span id="previous"><i data-feather="chevron-left"></i></span>
+                        <span id="next"><i data-feather="chevron-right"></i></span>
+
+                        <img src="Photo/photo_s1.jpg">
+                        <img src="Photo/photo_s2.jpg">
+                        <img src="Photo/photo_s3.jpg">
+                        <img src="Photo/photo_s4.jpg">
+                        <img src="Photo/photo_s5.jpg">
+                    </div>
+                </div>
+                <div class="bullets-container"></div>
+            </div>
+
+            <div class="snap_card">
+                <div class="item">
+                    <img src="Photo/photo_s1.jpg">
+                </div>
+                <div class="item">
+                    <img src="Photo/photo_s2.jpg">
+                </div>
+                <div class="item">
+                    <img src="Photo/photo_s3.jpg">
+                </div>
+                <div class="item">
+                    <img src="Photo/photo_s4.jpg">
+                </div>
+                <div class="item">
+                    <img src="Photo/photo_s5.jpg">
+                </div>
+            </div>
+
+            <div class="about"></div>
+
+            <div class="footer">
+                <div class="sitemap">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt excepturi officia illo ipsa in officiis voluptatem enim, quam doloremque quod assumenda incidunt architecto, veniam voluptatum, perspiciatis eligendi? Labore, sint expedita.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 導入BS5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
+    <!-- 導入 jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="common.js"></script>
+</body>
+
+</html>
