@@ -44,11 +44,11 @@ body {
     display: flex;
 }
 
-.category img{
+.iconBox{
     width: 30px;
 }
 
-a img {
+.icon {
     width: 40px;
 }
 
