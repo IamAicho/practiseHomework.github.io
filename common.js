@@ -17,7 +17,7 @@ $(function () {
             'left': circleX,
             'top': circleY,
         })
-    }, 10)
+    }, 5)
 })
 
 
